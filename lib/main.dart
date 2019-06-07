@@ -28,6 +28,11 @@ class MapsDemoState extends State<MapsDemo> {
         width: MediaQuery.of(context).size.width,
         child: GoogleMap(
           onMapCreated: _onMapCreated,
+          initialCameraPosition: CameraPosition(
+            target: LatLng(35.6580339, 139.7016358),
+            zoom: 17.0,
+          ),
+          myLocationEnabled: true,
         ),
       ),
     );
